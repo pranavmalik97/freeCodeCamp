@@ -14,7 +14,6 @@ describe('sort-files', () => {
       expect(sorted.length).toEqual(expected.length);
     });
 
-    // some random comments
     it('should sort the objects into html, css, jsx, js order', () => {
       const sorted = sortChallengeFiles(challengeFiles);
       const sortedKeys = sorted.map(({ fileKey }) => fileKey);
