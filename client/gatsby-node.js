@@ -6,16 +6,7 @@ const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const webpack = require('webpack');
 const env = require('./config/env.json');
 
-const {
-  createChallengePages,
-  createBlockIntroPages,
-  createSuperBlockIntroPages
-} = require('./utils/gatsby');
 
-const createByIdentityMap = {
-  blockIntroMarkdown: createBlockIntroPages,
-  superBlockIntroMarkdown: createSuperBlockIntroPages
-};
 
 exports.onCreateNode = function onCreateNode({ node, actions, getNode }) {
   const { createNodeField } = actions;
@@ -45,15 +36,7 @@ exports.createPages = function createPages({ graphql, actions, reporter }) {
     }
   }
 
-  if (!env.stripePublicKey) {
-    if (process.env.FREECODECAMP_NODE_ENV === 'production') {
-      throw new Error('Stripe public key is required to start the client!');
-    } else {
-      reporter.info(
-        'Stripe public key is missing or invalid. Required for Stripe integration.'
-      );
-    }
-  }
+
 
   const { createPage } = actions;
 
