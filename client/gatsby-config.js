@@ -11,6 +11,7 @@ const { clientLocale, curriculumLocale, homeLocation } = envData;
 const curriculumIntroRoot = path.resolve(__dirname, './src/pages');
 const pathPrefix = clientLocale === 'english' ? '' : '/' + clientLocale;
 
+// module code for exporting variables
 module.exports = {
   flags: {
     DEV_SSR: false

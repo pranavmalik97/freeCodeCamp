@@ -14,6 +14,8 @@ import GrowthBookProvider from './src/components/growth-book/growth-book-wrapper
 
 const store = createStore();
 
+// Some comments
+
 export const wrapRootElement = ({ element }) => {
   return (
     <Provider store={store}>

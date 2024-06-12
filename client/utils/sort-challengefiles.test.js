@@ -13,8 +13,6 @@ describe('sort-files', () => {
       expect(sorted).toEqual(expect.arrayContaining(expected));
       expect(sorted.length).toEqual(expected.length);
     });
-    // Hey
-    // My name is pranav
     
     it('should sort the objects into html, css, jsx, js order', () => {
       const sorted = sortChallengeFiles(challengeFiles);
